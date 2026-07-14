@@ -4,7 +4,7 @@ This repository is the review version of the code release for the paper:
 
 **Unified Cross-Mechanism Image Forgery Localization via Decoupled Sensitive and Invariant Representation Learning**
 
-The current version is provided for review and verification purposes. It includes a demo script and the best checkpoint selected from Stage 3 training. The complete version, including training code, full configuration files, data split scripts, evaluation scripts, and additional checkpoints, will be updated after the paper is accepted/published.
+The current version is provided for review and verification purposes. It includes a demo script and the checkpoint selected from Stage 3 training. The complete version, including training code, full configuration files, data split scripts, evaluation scripts, and additional checkpoints, will be updated after the paper is accepted/published.
 
 ## Overview
 
