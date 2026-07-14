@@ -15,7 +15,7 @@ This work studies unified pixel-level image forgery localization across heteroge
 This review version includes:
 
 - a demo script for testing a single input image;
-- the best Stage 3 checkpoint for verification;
+- the best Stage 3 checkpoint for verification (https://github.com/NeviNa-hub/Unified-Forgery-Localization/releases);
 - this README file;
 - a basic dependency file.
 
@@ -23,7 +23,7 @@ The demo is intended for inference verification only. Full training and evaluati
 
 ## Dataset Sources
 
-Due to dataset license restrictions, this repository does not redistribute original images or masks. Please download the datasets from their official sources:
+Please download the datasets from their official sources:
 
 - Columbia: https://www.ee.columbia.edu/ln/dvmm/downloads/authsplcuncmp/
 - COVERAGE: https://github.com/wenbihan/coverage
