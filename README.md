@@ -49,23 +49,4 @@ python demo.py --input path/to/image.png --checkpoint path/to/best_stage3_checkp
 
 Please adjust the command according to the actual checkpoint and demo script names in this repository.
 
-## Notes
-
-- The released checkpoint is selected from Stage 3 training.
-- The demo resizes the input image for inference according to the implementation setting.
-- The complete training pipeline will be released after publication.
-- Dataset files should be prepared by users according to the licenses and instructions of the original datasets.
-
-## Citation
-
-If you find this work useful, please cite:
-
-```bibtex
-@article{yourkey2026unified,
-  title={Unified Cross-Mechanism Image Forgery Localization via Decoupled Sensitive and Invariant Representation Learning},
-  author={Author Name and Coauthors},
-  journal={},
-  year={2026}
-}
-```
 
