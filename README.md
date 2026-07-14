@@ -15,7 +15,7 @@ This work studies unified pixel-level image forgery localization across heteroge
 This review version includes:
 
 - a demo script for testing a single input image;
-- the best Stage 3 checkpoint for verification (https://github.com/NeviNa-hub/Unified-Forgery-Localization/releases);
+- the Stage 3 checkpoint for verification (https://github.com/NeviNa-hub/Unified-Forgery-Localization/releases);
 - this README file;
 - a basic dependency file.
 
@@ -44,7 +44,7 @@ pip install -r requirements.txt
 Run the demo script with the released checkpoint:
 
 ```bash
-python demo.py --input path/to/image.png --checkpoint path/to/best_stage3_checkpoint.pth --output path/to/output_mask.png
+python demo.py --input path/to/image.png --checkpoint path/to/stage3_checkpoint.pth --output path/to/output_mask.png
 ```
 
 Please adjust the command according to the actual checkpoint and demo script names in this repository.
