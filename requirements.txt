@@ -1,31 +1,22 @@
-# Core deep learning
 torch
 torchvision
 torchaudio
 timm
 einops
-
-# Numerical computing
 numpy
 scipy
 pandas
 scikit-learn
 scikit-image
-
-# Image processing
 opencv-python
 Pillow
 imageio
 albumentations
 kornia
-
-# Visualization
 matplotlib
 seaborn
 tensorboard
 tensorboardX
-
-# Progress bars and utilities
 tqdm
 PyYAML
 yacs
@@ -33,19 +24,13 @@ easydict
 omegaconf
 packaging
 termcolor
-
-# Metrics and model analysis
 thop
 fvcore
 ptflops
-
-# Optional experiment utilities
 wandb
 joblib
 h5py
 lmdb
-
-# Compatibility helpers
 six
 setuptools
 wheel
