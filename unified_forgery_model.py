@@ -315,7 +315,7 @@ class UnifiedForgeryModel(nn.Module):
 
             self.sensitive_loss_weight = 0.15
             self.invariant_loss_weight = 0.0
-            self.confusion_loss_weight = 0.0
+            self.confusion_loss_weight = self.base_confusion_loss_weight * 0.5
             self.decouple_loss_weight = 0.0
             self.current_generative_main_weight = 1.0
 
