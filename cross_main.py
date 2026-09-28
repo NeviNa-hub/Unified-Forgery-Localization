@@ -1,7 +1,6 @@
 ﻿import torch
-
+# 
 from unified_forgery_model import UnifiedForgeryModel
-
 
 class cross_main(UnifiedForgeryModel):
 
