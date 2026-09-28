@@ -17,7 +17,6 @@ from cross_manipulation_heads import (
 from decoderhead import Multiple
 from grl import GradientReversalLayer
 
-
 class UnifiedForgeryModel(nn.Module):
     feature_keys = ('third1', 'third2', 'third3', 'third', 'last1', 'last')
 
