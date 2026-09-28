@@ -7,6 +7,7 @@ from PIL import Image
 
 MEAN = np.array([0.485, 0.456, 0.406], dtype=np.float32)
 STD = np.array([0.229, 0.224, 0.225], dtype=np.float32)
+INPUT_SIZE = 512
 
 def parse_args():
     parser = argparse.ArgumentParser(
@@ -16,7 +17,6 @@ def parse_args():
     parser.add_argument("--ckpt", required=True, help="Path to the trained checkpoint.")
     parser.add_argument("--output", default="./demo_mask.png", help="Output mask path.")
     parser.add_argument("--device", default="cuda", help="cuda or cpu.")
-    parser.add_argument("--input-size", type=int, default=512)
     parser.add_argument("--threshold", type=float, default=0.5)
     parser.add_argument("--save-prob", action="store_true", help="Also save probability map.")
     return parser.parse_args()
@@ -32,16 +32,18 @@ def build_model():
 
 def load_checkpoint(model, ckpt_path):
     try:
-        checkpoint = torch.load(ckpt_path, map_location="cpu", weights_only=False)
+        checkpoint = torch.load(ckpt_path, map_location="cpu", weights_only=True)
     except TypeError:
         checkpoint = torch.load(ckpt_path, map_location="cpu")
 
     state_dict = checkpoint["model"] if isinstance(checkpoint, dict) and "model" in checkpoint else checkpoint
-    load_info = model.load_state_dict(state_dict, strict=False)
-    if load_info.missing_keys:
-        print(f"[Warning] Missing keys: {len(load_info.missing_keys)}")
-    if load_info.unexpected_keys:
-        print(f"[Warning] Unexpected keys: {len(load_info.unexpected_keys)}")
+    if not isinstance(state_dict, dict):
+        raise TypeError("Checkpoint must be a state dict or contain a 'model' state dict.")
+
+    if state_dict and all(key.startswith("module.") for key in state_dict):
+        state_dict = {key[len("module."):]: value for key, value in state_dict.items()}
+
+    model.load_state_dict(state_dict, strict=True)
 
 
 def preprocess_image(image_path, input_size):
@@ -75,7 +77,7 @@ def main():
     model.set_training_stage("stage3")
     model.to(device).eval()
 
-    image_tensor = preprocess_image(image_path, args.input_size).to(device)
+    image_tensor = preprocess_image(image_path, INPUT_SIZE).to(device)
     with torch.no_grad():
         pred_prob = model.predict(image_tensor)
 
