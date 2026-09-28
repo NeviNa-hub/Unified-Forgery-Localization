@@ -6,6 +6,8 @@ This repository is the review version of the code release for the paper:
 
 The current version is provided for review and verification purposes. It includes a demo script and the checkpoint selected from Stage 3 training. The complete version, including training code, full configuration files, data split scripts, evaluation scripts, and additional checkpoints, will be updated after the paper is accepted/published.
 
+The currently provided checkpoint and partial source code can be used for inference.
+
 ## Overview
 
 This work studies unified pixel-level image forgery localization across heterogeneous forgery mechanisms, including conventional manipulations and generative forgeries. The proposed framework uses decoupled sensitive and invariant representation learning to preserve fine-grained localization cues while improving cross-mechanism generalization.
@@ -48,6 +50,5 @@ python demo.py --input path/to/image.png --checkpoint path/to/stage3_checkpoint.
 ```
 
 Please adjust the command according to the actual checkpoint and demo script names in this repository.
-
 
 
