@@ -50,3 +50,4 @@ python demo.py --input path/to/image.png --checkpoint path/to/stage3_checkpoint.
 Please adjust the command according to the actual checkpoint and demo script names in this repository.
 
 
+
