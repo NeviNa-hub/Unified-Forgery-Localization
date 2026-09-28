@@ -41,7 +41,7 @@ class UnifiedForgeryModel(nn.Module):
                  stage3_generative_main_weight=0.6,
                  stage2_main_fusion_max=0.15,
                  stage3_main_fusion_max=0.25,
-                 stage2_main_injection_start=0.35,
+                 stage2_main_injection_start=0.25,
                  invariant_main_logit_bound=2.5,
                  sensitive_main_logit_bound=2.0,
                  stage1_sensitive_main_fusion_scale=0.08,
