@@ -34,6 +34,12 @@ Please download the datasets from their official sources:
 - CocoGlide: https://github.com/grip-unina/TruFor
 - DeepFakes: https://github.com/ondyari/FaceForensics
 - DeepFakeDetection: originally introduced by Google Research at https://research.google/blog/contributing-data-to-deepfake-detection-research/ and accessed through the FaceForensics++ download interface at https://github.com/ondyari/FaceForensics/
+- DDL：https://modelscope.cn/datasets/DDLteam/DDL_dataset/files  and  https://github.com/inclusionConf/DDL/blob/main
+【 Given the large size of the DDL dataset, we provide a script, `ddl_image_test_fetch.py`, to help users quickly download the DDL-I image test set to their servers.
+Usage instructions:
+pip install modelscope requests
+python ddl_image_test_fetch.py ​​--output-dir ./DDL-I-test
+The script will download the official test archive and extract only the forged images and their corresponding masks into the `Tp/` and `Gt/` directories, respectively. The download archive is approximately 45.5 GB in size; please ensure free disk space is available for the download and extraction process. 】
 
 ## Quick Start
 
